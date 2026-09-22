@@ -1,0 +1,222 @@
+import type { Lang } from "@/lib/types";
+
+export const DICT = {
+  en: {
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.projects": "Projects",
+    "nav.thoughts": "Thoughts",
+    "nav.connect": "Connect",
+    "nav.admin": "Admin",
+    "nav.menu": "Menu",
+    "nav.close": "Close",
+
+    "landing.question": "What do I do?",
+    "landing.hint": "Choose a door. Each one leads somewhere different.",
+    "landing.skip": "Skip the question — show me everything",
+    "landing.enter": "Enter",
+    "landing.name": "Galaxy",
+
+    "hero.scroll": "Scroll",
+    "hero.projects": "Projects built",
+    "hero.thoughts": "Thoughts published",
+    "hero.available": "Open to collaboration",
+
+    "about.eyebrow": "Know me",
+    "about.title": "I am still becoming",
+    "about.story": "The story so far",
+    "about.learning": "What I'm learning",
+    "about.building": "What I'm building",
+    "about.goals": "What I'm reaching for",
+    "about.skills": "Tools I reach for",
+    "about.sayHello": "Say hello",
+    "about.based": "Based in",
+
+    "projects.eyebrow": "Explore my work",
+    "projects.title": "Things I have built",
+    "projects.subtitle":
+      "Some are finished. Some are alive and changing. All of them taught me something I could not have read.",
+    "projects.all": "All",
+    "projects.featured": "Featured",
+    "projects.view": "Open project",
+    "projects.code": "Code",
+    "projects.demo": "Live demo",
+    "projects.gallery": "Gallery",
+    "projects.stack": "Built with",
+    "projects.empty": "No projects here yet — the workshop is being set up.",
+    "projects.back": "All projects",
+    "projects.related": "More work",
+    "projects.count": "projects",
+
+    "status.idea": "Idea",
+    "status.in-progress": "In progress",
+    "status.live": "Live",
+    "status.paused": "Paused",
+    "status.archived": "Archived",
+
+    "category.web": "Web",
+    "category.tool": "Tool",
+    "category.education": "Education",
+    "category.system": "System",
+    "category.productivity": "Productivity",
+
+    "thoughts.eyebrow": "Thoughts",
+    "thoughts.title": "Notes from inside the process",
+    "thoughts.subtitle":
+      "Unfinished thinking about technology, people and the strange space between them.",
+    "thoughts.read": "Read",
+    "thoughts.empty": "Nothing published yet. Thinking is happening — writing is slower.",
+    "thoughts.back": "All thoughts",
+    "thoughts.min": "min read",
+    "thoughts.by": "By",
+
+    "cat.technology": "Technology",
+    "cat.philosophy": "Philosophy",
+    "cat.psychology": "Psychology",
+    "cat.learning": "Learning",
+    "cat.growth": "Growth",
+    "cat.building": "Building",
+    "cat.failure": "Failure",
+    "cat.life": "Life",
+
+    "connect.eyebrow": "Connect with me",
+    "connect.title": "Let's talk",
+    "connect.subtitle":
+      "A question, an idea, a correction, or just hello. No account needed — write and I will read it.",
+    "connect.name": "Your name",
+    "connect.email": "Email (optional)",
+    "connect.subject": "Subject",
+    "connect.message": "Message",
+    "connect.send": "Send message",
+    "connect.sending": "Sending…",
+    "connect.sent": "Sent. Thank you — I'll read it properly.",
+    "connect.error": "Something went wrong. Try again, or email me directly.",
+    "connect.required": "Name and message are required.",
+    "connect.socials": "Elsewhere",
+    "connect.whatsapp": "WhatsApp",
+    "connect.emailDirect": "Email",
+    "connect.or": "or find me at",
+
+    "footer.made": "Built, broken and rebuilt by",
+    "footer.rights": "All rights reserved.",
+    "footer.philosophy": "Start. Build. Learn. Improve. Repeat.",
+
+    "common.backHome": "Back home",
+    "common.notFound": "This page does not exist yet.",
+    "common.minRead": "min read",
+  },
+  sw: {
+    "nav.home": "Nyumbani",
+    "nav.about": "Kunihusu",
+    "nav.projects": "Miradi",
+    "nav.thoughts": "Mawazo",
+    "nav.connect": "Wasiliana",
+    "nav.admin": "Utawala",
+    "nav.menu": "Menyu",
+    "nav.close": "Funga",
+
+    "landing.question": "Mimi hufanya nini?",
+    "landing.hint": "Chagua mlango. Kila mmoja unaongoza mahali tofauti.",
+    "landing.skip": "Ruka swali — nionyeshe kila kitu",
+    "landing.enter": "Ingia",
+    "landing.name": "Galaxy",
+
+    "hero.scroll": "Sogeza",
+    "hero.projects": "Miradi iliyojengwa",
+    "hero.thoughts": "Mawazo yaliyochapishwa",
+    "hero.available": "Yuko wazi kwa ushirikiano",
+
+    "about.eyebrow": "Nifahamu",
+    "about.title": "Bado ninaendelea kuwa",
+    "about.story": "Hadithi hadi sasa",
+    "about.learning": "Ninachojifunza",
+    "about.building": "Ninachojenga",
+    "about.goals": "Ninacholenga",
+    "about.skills": "Zana ninazotumia",
+    "about.sayHello": "Sema habari",
+    "about.based": "Nipo",
+
+    "projects.eyebrow": "Tazama kazi zangu",
+    "projects.title": "Vitu nilivyojenga",
+    "projects.subtitle":
+      "Vingine vimekamilika. Vingine viko hai na vinabadilika. Vyote vilinifundisha kitu ambacho nisingeweza kusoma.",
+    "projects.all": "Yote",
+    "projects.featured": "Maalum",
+    "projects.view": "Fungua mradi",
+    "projects.code": "Kodi",
+    "projects.demo": "Jaribu",
+    "projects.gallery": "Picha",
+    "projects.stack": "Kimejengwa na",
+    "projects.empty": "Hakuna miradi bado — karakana inaandaliwa.",
+    "projects.back": "Miradi yote",
+    "projects.related": "Kazi zaidi",
+    "projects.count": "miradi",
+
+    "status.idea": "Wazo",
+    "status.in-progress": "Inaendelea",
+    "status.live": "Inafanya kazi",
+    "status.paused": "Imesitishwa",
+    "status.archived": "Imehifadhiwa",
+
+    "category.web": "Tovuti",
+    "category.tool": "Zana",
+    "category.education": "Elimu",
+    "category.system": "Mfumo",
+    "category.productivity": "Tija",
+
+    "thoughts.eyebrow": "Mawazo",
+    "thoughts.title": "Maelezo kutoka ndani ya mchakato",
+    "thoughts.subtitle":
+      "Mawazo yasiyokamilika kuhusu teknolojia, watu na nafasi ya ajabu iliyopo kati yao.",
+    "thoughts.read": "Soma",
+    "thoughts.empty": "Hakuna kilichochapishwa bado. Kufikiri kunaendelea — kuandika ni polepole zaidi.",
+    "thoughts.back": "Mawazo yote",
+    "thoughts.min": "dakika za kusoma",
+    "thoughts.by": "Na",
+
+    "cat.technology": "Teknolojia",
+    "cat.philosophy": "Falsafa",
+    "cat.psychology": "Saikolojia",
+    "cat.learning": "Kujifunza",
+    "cat.growth": "Ukuaji",
+    "cat.building": "Kujenga",
+    "cat.failure": "Kushindwa",
+    "cat.life": "Maisha",
+
+    "connect.eyebrow": "Wasiliana nami",
+    "connect.title": "Tuzungumze",
+    "connect.subtitle":
+      "Swali, wazo, marekebisho, au habari tu. Huhitaji akaunti — andika nami nitasoma.",
+    "connect.name": "Jina lako",
+    "connect.email": "Barua pepe (si lazima)",
+    "connect.subject": "Mada",
+    "connect.message": "Ujumbe",
+    "connect.send": "Tuma ujumbe",
+    "connect.sending": "Inatuma…",
+    "connect.sent": "Imetumwa. Asante — nitasoma vizuri.",
+    "connect.error": "Hitilafu imetokea. Jaribu tena, au nitumie barua pepe moja kwa moja.",
+    "connect.required": "Jina na ujumbe vinahitajika.",
+    "connect.socials": "Penginepo",
+    "connect.whatsapp": "WhatsApp",
+    "connect.emailDirect": "Barua pepe",
+    "connect.or": "au nipate kwenye",
+
+    "footer.made": "Kimejengwa, kuvunjwa na kujengwa tena na",
+    "footer.rights": "Haki zote zimehifadhiwa.",
+    "footer.philosophy": "Anza. Jenga. Jifunza. Boresha. Rudia.",
+
+    "common.backHome": "Rudi nyumbani",
+    "common.notFound": "Ukurasa huu haupo bado.",
+    "common.minRead": "dakika za kusoma",
+  },
+} as const;
+
+export type DictKey = keyof (typeof DICT)["en"];
+
+export function translate(lang: Lang, key: string): string {
+  const table = DICT[lang] as Record<string, string>;
+  const fallback = DICT.en as Record<string, string>;
+  return table[key] ?? fallback[key] ?? key;
+}
+
+export type Translator = (key: string) => string;
