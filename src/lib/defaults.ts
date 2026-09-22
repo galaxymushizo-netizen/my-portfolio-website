@@ -62,8 +62,8 @@ export const DEFAULT_PROFILE = {
     "• Kutoa kazi ambayo mtu halisi huitumia kila wiki\n• Kuelewa watu vizuri kama ninavyoelewa kodi\n• Kuandika hadharani, hata wazo linapokuwa halijakamilika",
   ),
   location: bi("Tanzania · East Africa", "Tanzania · Afrika Mashariki"),
-  email: "hello@galaxy.dev",
-  whatsapp: "+255700000000",
+  email: "galaxymushizo@gmail.com",
+  whatsapp: "+255699279126",
   resumeUrl: null as string | null,
 };
 
@@ -271,8 +271,8 @@ export const DEFAULT_SKILLS = [
 export const DEFAULT_LINKS = [
   { label: "GitHub", url: "https://github.com/", kind: "social" },
   { label: "X", url: "https://x.com/", kind: "social" },
-  { label: "WhatsApp", url: "https://wa.me/255700000000", kind: "contact" },
-  { label: "Email", url: "mailto:hello@galaxy.dev", kind: "contact" },
+  { label: "WhatsApp", url: "https://wa.me/255699279126", kind: "contact" },
+  { label: "Email", url: "mailto:galaxymushizo@gmail.com", kind: "contact" },
 ];
 
 export const DEFAULT_THOUGHTS = [

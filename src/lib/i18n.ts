@@ -96,6 +96,9 @@ export const DICT = {
     "connect.whatsapp": "WhatsApp",
     "connect.emailDirect": "Email",
     "connect.or": "or find me at",
+    "connect.commentsTitle": "What people said",
+    "connect.commentsEmpty": "No messages yet — be the first to say hello.",
+    "connect.commentsLoading": "Loading messages…",
 
     "footer.made": "Built, broken and rebuilt by",
     "footer.rights": "All rights reserved.",
@@ -200,6 +203,9 @@ export const DICT = {
     "connect.whatsapp": "WhatsApp",
     "connect.emailDirect": "Barua pepe",
     "connect.or": "au nipate kwenye",
+    "connect.commentsTitle": "Watu walichosema",
+    "connect.commentsEmpty": "Hakuna ujumbe bado — kuwa wa kwanza kusalimia.",
+    "connect.commentsLoading": "Inapakia ujumbe…",
 
     "footer.made": "Kimejengwa, kuvunjwa na kujengwa tena na",
     "footer.rights": "Haki zote zimehifadhiwa.",

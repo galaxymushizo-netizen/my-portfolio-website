@@ -1,12 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLang } from "@/components/LanguageProvider";
 import { Reveal, SectionHeading } from "@/components/primitives";
 import { pick } from "@/lib/types";
 import type { LinkItem, Profile } from "@/lib/types";
 
 type Status = "idle" | "sending" | "sent" | "error";
+
+type Comment = {
+  id: number;
+  name: string;
+  subject: string;
+  message: string;
+  createdAt: string | null;
+};
 
 export function ConnectSection({
   profile,
@@ -18,6 +26,24 @@ export function ConnectSection({
   const { t, lang } = useLang();
   const [status, setStatus] = useState<Status>("idle");
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [comments, setComments] = useState<Comment[]>([]);
+  const [commentsLoading, setCommentsLoading] = useState(true);
+
+  const loadComments = async () => {
+    try {
+      const res = await fetch("/api/comments", { cache: "no-store" });
+      const data = (await res.json().catch(() => ({}))) as { comments?: Comment[] };
+      setComments(Array.isArray(data.comments) ? data.comments : []);
+    } catch {
+      setComments([]);
+    } finally {
+      setCommentsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadComments();
+  }, []);
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -35,6 +61,7 @@ export function ConnectSection({
       if (!res.ok) throw new Error("failed");
       setStatus("sent");
       setForm({ name: "", email: "", subject: "", message: "" });
+      loadComments();
     } catch {
       setStatus("error");
     }
@@ -198,6 +225,44 @@ export function ConnectSection({
             </form>
           </Reveal>
         </div>
+
+        <Reveal delay={100}>
+          <div className="mt-16">
+            <p className="eyebrow">{t("connect.commentsTitle")}</p>
+            {commentsLoading ? (
+              <p className="mt-4 text-sm text-mist-500">{t("connect.commentsLoading")}</p>
+            ) : comments.length === 0 ? (
+              <p className="mt-4 text-sm text-mist-500">{t("connect.commentsEmpty")}</p>
+            ) : (
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {comments.map((c) => (
+                  <article
+                    key={c.id}
+                    className="card-surface rounded-2xl p-5"
+                  >
+                    <div className="flex items-baseline justify-between gap-3">
+                      <p className="display text-sm text-mist-50">{c.name}</p>
+                      {c.createdAt ? (
+                        <time className="shrink-0 text-[0.68rem] uppercase tracking-[0.14em] text-mist-500">
+                          {new Date(c.createdAt).toLocaleDateString(
+                            lang === "sw" ? "sw-TZ" : "en-GB",
+                            { day: "numeric", month: "short", year: "numeric" },
+                          )}
+                        </time>
+                      ) : null}
+                    </div>
+                    {c.subject ? (
+                      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-signal-300/80">
+                        {c.subject}
+                      </p>
+                    ) : null}
+                    <p className="mt-2 text-sm leading-relaxed text-mist-300">{c.message}</p>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
