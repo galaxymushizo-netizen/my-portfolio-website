@@ -1,5 +1,7 @@
 # My Portfolio Website — Galaxy Builder in Public
 
+🌍 **Live website: https://my-portfolio-website-three-sigma-14.vercel.app**
+
 Bilingual (English / Kiswahili) interactive portfolio built with Next.js 16, Tailwind CSS 4, Drizzle ORM + Postgres.
 
 Live interactive experience: landing gate → work / about / connect, project + thought detail pages, EN/SW language switch, contact form.
